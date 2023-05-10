@@ -2,8 +2,8 @@ import { useState } from "react"
 
 const App = () => {
   const [day, setDay] = useState('30');
-  const [month, setMonth] = useState('');
-  const [year, setYear] = useState('');
+  const [month, setMonth] = useState('10');
+  const [year, setYear] = useState('1999');
 
   const handleDayChange = (e) => setDay(e.target.value)
   const handleMonthChange = (e) => setMonth(e.target.value)
@@ -26,6 +26,7 @@ const App = () => {
           <div>
             <label htmlFor="month" >month</label>
             <input id="month"
+            className="appearance-none"
               type='number'
               value={month}
               onChange={handleMonthChange}
