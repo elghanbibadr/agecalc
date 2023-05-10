@@ -1,25 +1,43 @@
-import React from 'react'
+import { useState } from "react"
 
 const App = () => {
+  const [day, setDay] = useState('');
+  const [month, setMonth] = useState('');
+  const [year, setYear] = useState('');
+
+  const handleDayChange = (e) => setDay(e.target.value)
+
   return (
     <div className='h-screen   flex items-center justify-center bg-Offwhite' >
-    <div className='bg-White w-[70%] h-[400px] p-4 lg:w-1/2  '>
-      {/* header */}
-      <form className='flex justify-between '>
-        <div>
-          <label  className='flex text-Smokeygrey font-bold uppercase text-sm'  for="day">day</label>
-                <input className='w-20 border-[1px]  py-2' id="day" type='number' value="30" name="day" />
-        </div>
-        <div>
-          <label className='flex font-bold uppercase text-Smokeygrey text-sm' for="month" >month</label>
-                <input className=' w-20 border-[1px]  py-2' id="month" type='number' value="11" name="month" />
-        </div>
-        <div>
-          <label className='flex font-bold uppercase text-Smokeygrey text-sm'  for="year" >year</label>
-                <input className=' w-20 border-[1px]  py-2' id="day" type='number' value="2020" name="year" />
-        </div>
-      </form>
-    </div>
+      <div className='bg-White w-[70%] h-[400px] p-4 lg:w-1/2  '>
+        {/* header */}
+        <form className='flex justify-between '>
+          <div>
+            <label for="day">day</label>
+            <input id="day"
+              type='number'
+              value="30"
+              name="day"
+              placeholder='DD' />
+          </div>
+          <div>
+            <label for="month" >month</label>
+            <input id="month"
+              type='number'
+              value="11"
+              name="month"
+              placeholder='MM' />
+          </div>
+          <div>
+            <label for="year" >year</label>
+            <input id="day"
+              type='number'
+              value="2020"
+              name="year"
+              placeholder='YYYY' />
+          </div>
+        </form>
+      </div>
     </div>
   )
 }
