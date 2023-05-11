@@ -21,7 +21,7 @@ label{
 }
 
 input{
-  @apply  placeholder:font-bold font-bold text-[1.3rem] w-24 border-[1px]   px-1 my-2 border-Smokeygrey rounded-md  py-2 focus:border-Purple outline-none 
+  @apply  placeholder:font-bold relative font-bold text-[1.3rem] w-24 border-[1px]   px-1 my-2 border-Smokeygrey rounded-md  py-2 focus:border-Purple outline-none 
 }
 
 h1{

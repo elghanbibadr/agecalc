@@ -8,15 +8,17 @@ const App = () => {
   const [calculatedYear, setCalculatedYear] = useState('');
   const [calculatedMonth, setCalculatedMonth] = useState('');
   const [calculatedDay, setCalculatedDay] = useState('');
+  const [isValidDay,setIsValidDay] = useState(true);
 
-
-  const handleDayChange = (e) => setDay(e.target.value)
+  const handleDayChange = (e) => {
+    if (day.length>2)setIsValidDay(false)
+    setDay(e.target.value)
+  }
   const handleMonthChange = (e) => setMonth(e.target.value)
   const handleYearChange = (e) => setYear(e.target.value)
 
   const calcAge=() =>{
-   const currentTime= new Date();
-   let start = new Date(year,month,day);
+    let start = new Date(year,month,day);
    let end = new Date();
  
    // Calculate time difference in milliseconds
@@ -25,17 +27,15 @@ const App = () => {
    var yearsDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365.25));
    var remainingTime = timeDiff % (1000 * 60 * 60 * 24 * 365.25);
    var monthsDiff = Math.floor(remainingTime / (1000 * 60 * 60 * 24 * 30.44));
-   remainingTime %= 1000 * 60 * 60 * 24 * 30.44;
+   remainingTime %= 1000 * 60 * 60 * 24 *30.44;
    var daysDiff = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
  
-
-
-
    setCalculatedDay(daysDiff)
    setCalculatedMonth(monthsDiff + 1)
    setCalculatedYear(yearsDiff)
  
   }
+
   return (
     <div className='h-screen  flex justify-center items-center   bg-Offwhite' >
       <div className='bg-White w-[70%] h-[400px] p-4 lg:w-1/2  '>
@@ -45,11 +45,13 @@ const App = () => {
             <div>
               <label htmlFor="day">day</label>
               <input id="day"
+               maxLength={2}
                 type='number'
                 value={day}
                 name="day"
                 onChange={handleDayChange}
                 placeholder='DD' />
+             {isValidDay && <span className="text-Lightred ">must be a valid date</span>}
             </div>
             <div>
               <label htmlFor="month" >month</label>
