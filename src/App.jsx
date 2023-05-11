@@ -45,7 +45,13 @@ const App = () => {
                 placeholder='YYYY' />
             </div>
             </div>
-            <div className="bg-Purple   cursor-pointer self-center mt-10 h-12 w-12 rounded-full flex justify-center items-center">
+             {/* <div className="  h-2  border-2 border-t-Purple" >
+
+            </div>  */}
+             <svg className="relative top-16 " width="100%" height="1">
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="black" strokeWidth="1" />
+    </svg>
+            <div className="bg-Purple  z-20 cursor-pointer self-center mt-10 h-12 w-12 rounded-full flex justify-center items-center">
               <img className="h-7 " src={iconArrow} alt='arrow icon' />
             </div>
           </form>
