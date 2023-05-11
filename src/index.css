@@ -25,5 +25,5 @@ input{
 }
 
 h1{
-  @apply font-extrabold text-5xl
+  @apply font-extrabold text-5xl text-Offblack
 }

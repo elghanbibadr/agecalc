@@ -57,11 +57,31 @@ const App = () => {
           </form>
         {/* date */}
       <div className="flex mt-4  items-center">
-        <span className="h-2 mx-2 w-8 bg-Purple block">
-        </span>
-        <span className="h-2  w-8 mr-4 bg-Purple block">
-        </span>
+        <div className="flex">
+          <span className="h-2 mx-2 w-8 bg-Purple block">
+          </span>
+          <span className="h-2  w-8 mr-4 bg-Purple block">
+          </span>
+        </div>
         <h1>years</h1>
+      </div>
+      <div className="flex mt-4  items-center">
+        <div className="flex">
+          <span className="h-2 mx-2 w-8 bg-Purple block">
+          </span>
+          <span className="h-2  w-8 mr-4 bg-Purple block">
+          </span>
+        </div>
+        <h1>months</h1>
+      </div>
+      <div className="flex mt-4  items-center">
+        <div className="flex">
+          <span className="h-2 mx-2 w-8 bg-Purple block">
+          </span>
+          <span className="h-2  w-8 mr-4 bg-Purple block">
+          </span>
+        </div>
+        <h1>days</h1>
       </div>
         </div>
       </div>
