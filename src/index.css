@@ -17,9 +17,9 @@ body{
 }
 
 label{
-  @apply flex text-Smokeygrey tracking-widest  font-bold uppercase text-[11px] 
+  @apply flex text-Smokeygrey tracking-[3px]  font-bold uppercase text-[10px] 
 }
 
 input{
-  @apply  placeholder:font-bold w-20 border-[1px]   px-1 my-1 border-Smokeygrey rounded-md  py-2 focus:border-Lightred outline-none 
+  @apply  placeholder:font-bold font-bold text-[1.3rem] w-24 border-[1px]   px-1 my-2 border-Smokeygrey rounded-md  py-2 focus:border-Purple outline-none 
 }
