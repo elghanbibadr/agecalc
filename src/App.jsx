@@ -16,8 +16,25 @@ const App = () => {
 
   const calcAge=() =>{
    const currentTime= new Date();
-   console.log(currentTime.getFullYear())
-   setCalculatedYear(currentTime.getFullYear() - year)
+   let start = new Date(year,month,day);
+   let end = new Date();
+ 
+   // Calculate time difference in milliseconds
+   let timeDiff = Math.abs(end - start);
+
+   var yearsDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24 * 365.25));
+   var remainingTime = timeDiff % (1000 * 60 * 60 * 24 * 365.25);
+   var monthsDiff = Math.floor(remainingTime / (1000 * 60 * 60 * 24 * 30.44));
+   remainingTime %= 1000 * 60 * 60 * 24 * 30.44;
+   var daysDiff = Math.floor(remainingTime / (1000 * 60 * 60 * 24));
+ 
+
+
+
+   setCalculatedDay(daysDiff)
+   setCalculatedMonth(monthsDiff + 1)
+   setCalculatedYear(yearsDiff)
+ 
   }
   return (
     <div className='h-screen  flex justify-center items-center   bg-Offwhite' >
