@@ -55,6 +55,14 @@ const App = () => {
               <img className="h-7 " src={iconArrow} alt='arrow icon' />
             </div>
           </form>
+        {/* date */}
+      <div className="flex mt-4  items-center">
+        <span className="h-2 mx-2 w-8 bg-Purple block">
+        </span>
+        <span className="h-2  w-8 mr-4 bg-Purple block">
+        </span>
+        <h1>years</h1>
+      </div>
         </div>
       </div>
   )
